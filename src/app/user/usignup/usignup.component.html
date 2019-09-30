@@ -1,0 +1,24 @@
+<script>
+    $('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+<div class="login-page" id='01'>
+    <div class="form">
+     
+      <form class="login-form" method="POST" (ngSubmit)="register()" name="usignup" novalidate>
+        <a class="close" onclick="document.getElementById('01').style.display='none'" routerLink="/" >&times;</a>
+           <h3 align="center"> <b>USER-SignUp</b></h3>
+           
+           <input type="Email" placeholder="Enter Email here"   class="form-control is-invalid" name="u_id" required [(ngModel)]="email"/>
+        
+            
+           <input type="password" placeholder="Enter password here" name="u_pass" required [(ngModel)]="pass"/>
+           <input type="password" placeholder="Please Confirm password" name="c_pass" required [(ngModel)]="c_pass"/>
+           <button type="submit">create</button>
+           <p class="message">Already registered? <a href="#">Sign In</a></p>
+      </form>
+    </div>
+  </div>
+ 
+  <router-outlet></router-outlet>

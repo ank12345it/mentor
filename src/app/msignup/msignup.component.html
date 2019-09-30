@@ -1,0 +1,72 @@
+<script>
+    $('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+<div class="login-page" id='01'>
+    <div class="form">
+     
+      <form class="login-form">
+        <a class="close" onclick="document.getElementById('01').style.display='none'" routerLink="/" >&times;</a>
+           <h3 align="center"> <b>MENTOR-SignUp</b></h3>
+           <input type="Email" placeholder="Enter Email here" required>
+           <input type="password" placeholder="Enter password here" required>
+           <input type="password" placeholder="Please Confirm password" required>
+           <input type="Text" placeholder="Enter known technologies here" required>
+           <input type="Text" placeholder="Experience(in years)" required>
+           <input type="Text" placeholder="LinkedInId" required>
+           
+            
+           <button>create</button>
+           <p class="message">Already registered? <a href="#">Sign In</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+          
+  
+  
+  
+  <section class="search-sec">
+      <div class="container">
+          <form action="#" method="post" novalidate="novalidate">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="row">
+                          <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                              <input type="text" class="form-control search-slt" placeholder="Enter Pickup City">
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                              <input type="text" class="form-control search-slt" placeholder="Enter Drop City">
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                              <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                  <option>Select Vehicle</option>
+                                  <option>Example one</option>
+                                  <option>Example one</option>
+                                  <option>Example one</option>
+                                  <option>Example one</option>
+                                  <option>Example one</option>
+                                  <option>Example one</option>
+                              </select>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                              <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </section>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <router-outlet></router-outlet>

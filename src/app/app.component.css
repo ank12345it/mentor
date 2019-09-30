@@ -1,0 +1,16 @@
+.mar
+		     {
+			 margin-right:30px;
+		
+             }
+a:hover,a1:hover
+			 {
+			   background-color: darkkhaki;
+			 }
+.bg{
+	background-color: darkkhaki;
+}
+.navbar-custom {
+    color: #FFFFFF;
+    background-color: #CC3333;
+}
