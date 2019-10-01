@@ -97,8 +97,17 @@
   color: #000000;
   text-decoration: none;
 }
+.bg-secondary {
+  background-color: #6f42c1!important;
+}
 .container .info span .fa {
   color: #EF3B3A;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #17a2b8;
+  border-radius: .3rem;
 }
 body {
   background: #76b852; /* fallback for old browsers */
