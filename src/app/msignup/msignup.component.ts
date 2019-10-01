@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { timeout } from 'q';
+import { Mpass } from './mpass';
 
 @Component({
   selector: 'app-msignup',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./msignup.component.css']
 })
 export class MsignupComponent implements OnInit {
-
+ first;second;
   constructor() { }
-
+  check(){
+    //console.log(first,second);
+     if(this.first!=this.second)
+     {
+         return false;
+     }
+     else{
+       return true;
+     }
+ }
   ngOnInit() {
   }
-
+ mregister(form){
+   console.log(form.value.email,form.value.contact,form.value.pass,form.value.c_pass,form.value.tech,form.value.exp,form.value.sttime,form.value.entime );
+  const data=new Mpass(form.value.email,form.value.contact,form.value.pass,form.value.c_pass,form.value.tech,form.value.exp,form.value.sttime,form.value.entime); 
+  
+}
 }
