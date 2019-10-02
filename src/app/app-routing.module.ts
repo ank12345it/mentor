@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UloginComponent } from './user/ulogin/ulogin.component';
-import { MloginComponent } from './mlogin/mlogin.component';
+import { MloginComponent } from './mentor/mlogin/mlogin.component';
 import { AloginComponent } from './alogin/alogin.component';
 import { UsignupComponent } from './user/usignup/usignup.component';
 import { AppComponent } from './app.component';
-import { MsignupComponent } from './msignup/msignup.component';
+import { MsignupComponent } from './mentor/msignup/msignup.component';
 import { JavamentorComponent } from './javamentor/javamentor.component';
 import { SearchComponent } from './search/search.component';
 
