@@ -1,35 +1,7 @@
 <div class="container">
 <div class="jumbotron">
-    <form #frm="ngForm" (ngSubmit)="adduser(frm)">
-        <div class="form-group">
-         <label for="name">
-           Name:
-         </label>
-         <input type="text" name="name" #nameUser=ngModel class="form-control" ngModel required pattern="[a-zA-Z][^#&\~;$^%{}?]{1,20}$"> 
-        </div>
-        <div class="alert alert-danger" *ngIf="nameUser?.touched && nameUser.errors?.required" >
-          
-           Name is required
-          
-          <div *ngIf="nameUser.errors?.pattern">
-              Name is invalid
-             </div> 
-        </div> 
-      
-        <div class="form-group">
-            <label for="contact">
-              contact:
-            </label>
-            <input type="text" name="contact" #contactUser=ngModel class="form-control" maxlength="10" minlength="10" ngModel required pattern="^[0-9]*$">
-        </div>
-        <div class="alert alert-danger" *ngIf="contactUser?.touched && contactUser.errors?.required " >
-           
-             Contact is required
-        </div>
-          <div class="alert alert-danger" *ngIf="contactUser?.touched && contactUser.errors?.pattern || contactUser.errors?.minlength">
-                Contact is invalid
-           </div>
-          
+    <form #frm="ngForm" (ngSubmit)="login(frm)">
+       
 
       
         <div class="form-group">
@@ -44,6 +16,20 @@
          </div>
          <div class="alert-danger danger" *ngIf="emailUser?.touched && emailUser.errors?.pattern">
             Email is invalid
+           </div> 
+
+           <div class="form-group">
+            <label for="password">
+              password:
+            </label>
+            <input type="text" name="pass" class="form-control" [(ngModel)]="first" #passUser=ngModel ngModel required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+        </div>
+        <div class="alert alert-danger" *ngIf="passUser?.touched && passUser.errors?.required" >
+            
+             password is required
+         </div>
+         <div class="alert-danger danger" *ngIf="passUser?.touched && passUser.errors?.pattern">
+            password is invalid
            </div> 
         <br>
       <button type="submit" name="button" class="btn btn-success" [disabled]="frm.invalid">login</button>
