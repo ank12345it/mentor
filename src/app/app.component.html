@@ -35,7 +35,8 @@
                 <a class="btn btn-primary mar "  data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fa fa-search"></i>Search Mentor</a>
               
         </li>
-      <li  class="nav-item dropdown " >
+      <!-- <div *ngIf="checkTok()==0"> -->
+      <li  class="nav-item dropdown " *ngIf="checkTok()==0">
         <button type="button" style="color:white;" class="btn btn-primary dropdown-toggle mar nav-link dropdown-toggle mar " data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false"> 
       SIGN-UP
       </button>
@@ -46,12 +47,12 @@
       
       </div>
       </li>
-      <li  class="nav-item dropdown " >
+      <li  class="nav-item dropdown " *ngIf="checkTok()==0" >
         <button type="button" style="color:white;" class="btn btn-primary dropdown-toggle mar nav-link dropdown-toggle " data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false"> 
       LOG-IN
       </button>
       
-      <div  class="dropdown-menu"  aria-labelledby="navbarDropdown">
+      <div  class="dropdown-menu"  aria-labelledby="navbarDropdown" >
       <a  class="dropdown-item" href="#" routerLink="Userlog"> User Login </a>
       
       <div  class="dropdown-divider"></div>
@@ -62,6 +63,11 @@
      
       </div>
       </li>
+      <li class="nav-item" *ngIf="checkTok()!=0">
+          <button type="button" class="btn btn-danger wrn-btn" (click)="logout()">Logout</button>
+
+      </li>
+    <!-- </div> -->
    </ul>
 </div>
 </nav>

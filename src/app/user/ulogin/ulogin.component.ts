@@ -27,6 +27,7 @@ export class UloginComponent implements OnInit {
     console.log(data);
     localStorage.setItem('token',data.toString());
     this.router.navigate(['dashb']);
+    
   },
   error=>{}
   )
