@@ -11,6 +11,10 @@ import { MsignupComponent } from './mentor/msignup/msignup.component';
 import { JavamentorComponent } from './javamentor/javamentor.component';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { UserdashComponent } from './dash/userdash/userdash.component';
+import { MentordashComponent } from './dash/mentordash/mentordash.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { HttpClientModule } from '@angular/common/http';
     UsignupComponent,
     MsignupComponent,
     JavamentorComponent,
-    SearchComponent
+    SearchComponent,
+    HomeComponent,
+    UserdashComponent,
+    MentordashComponent,
+    
   ],
   imports: [
     BrowserModule,
