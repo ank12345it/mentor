@@ -25,6 +25,7 @@ export class UloginComponent implements OnInit {
   const req=this.http.post('http://localhost:8091/api/ulogin',c).toPromise()
   .then((data:any)=>{
     console.log(data);
+   
     localStorage.setItem('token',data.toString());
     this.router.navigate(['dashb']);
     

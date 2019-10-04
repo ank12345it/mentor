@@ -14,6 +14,8 @@ export class UsignupComponent implements OnInit {
 
   constructor(private http:HttpClient,private commonService:CommonService  ) {  }
   first;second;
+  james="";
+  public response:any=[];
   ngOnInit() {
   }
   
@@ -36,6 +38,7 @@ export class UsignupComponent implements OnInit {
     const req=this.http.post('http://localhost:8091/api/user',c).toPromise()
     .then((data:any)=>{
       console.log(data);
+      this.response=data;
     })
   }
 

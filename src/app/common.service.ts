@@ -17,7 +17,9 @@ export class CommonService {
  getMentorName(){
   return this.http.get('http://localhost:8091/api/mentorname',{
     observe:'body',
+    
     params:new  HttpParams().append('token',localStorage.getItem('token'))
-  });
+  }
+  );
 }
 }

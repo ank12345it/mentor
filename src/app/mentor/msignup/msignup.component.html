@@ -4,7 +4,17 @@
           <span class='close' onclick="document.getElementById('01').style.display='none'" routerlink="../Usignup">&times;</span>
          <b><h3> SIGN-UP MENTOR</h3></b>
          <br>
-         
+         <!-- <div class="form-group" > -->
+          <!-- <label for="username">
+           Username:
+          </label>
+          <input type="text" name="username" class="form-control" #nameUser=ngModel ngModel required >
+      </div>
+      <div class="alert alert-danger" *ngIf="nameUser?.touched && nameUser.errors?.required" >
+          
+           Username is required
+       </div>
+         -->
           <div class="form-group" >
               <label for="email">
                 email:

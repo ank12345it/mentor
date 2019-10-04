@@ -1,6 +1,6 @@
 export class Mpass{
     
-    
+        // username:String;
         email:String;
         contact:String;
         pass:String;
@@ -12,6 +12,7 @@ export class Mpass{
          
         
         constructor(email,contact,pass,c_pass,tech,exp,sttime,entime){
+            // this.username=username;
             this.email=email;
             this.contact=contact;
             this.pass=pass;
